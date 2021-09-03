@@ -1,10 +1,21 @@
+/* General*/
 body{
-  background: #FF8C08;
-    }
+ background-color: #FF8C08;
+ overflow-x: hidden;
+ margin-left: 10%
+}
+
 h1, h2{
   color: #FFFFFF; 
   font-family: Arial, Helvetica, sans-serif
-    }
+}
+
+.header2_2{
+  color: #FF8C08; 
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 6%
+}
+
 h1 {
   font-size: 25px;
   font-weight: 100;
@@ -13,13 +24,31 @@ h1 {
 strong{
   font-size: 100pt
 }
+
 p{
   color: #FFFFFF;
   font-family: Arial, Helvetica, sans-serif
 }
+
 section{
-  height: 600px;
+  height: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
+
+#container{
+ background: linear-gradient(to bottom, #FF8C08, transparent);
+ top: 0;
+ position: fixed;
+ width: 100%;
+ display: flex;
+}
+
+#title{
+width: 60%;
+}
+
+/* Nav Section*/
 nav a {
   text-decoration: none;
   text-align: center;
@@ -27,31 +56,34 @@ nav a {
   width: 150px;
   display: inline-block
 }
+
 nav a:hover{
   border-bottom: 3px white solid;
   font-weight: bold;
 }
+
 nav a:hover img {
   border-bottom:0px;
 }
+
+nav a:visited{
+  background:#FFFFFF;
+  opacity: 50%;
+}
+
 nav ul /* https://www.w3schools.com/css/css_navbar.asp*/ {
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: fixed;
 }
+
 nav li {
   display: inline; /**/
   margin-left:70px;
   padding-top:25px;
 }
-td{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #FFFFFF;
-}
-form{
-  float: right;
-}
+
 #mainnav {
   width: 750px;
   height: 50px;
@@ -59,75 +91,212 @@ form{
   font-size: 12pt;
   text-align: center;
   display: inline-block;
-  padding-top: 25px
+  padding-top: 25px;
 }
-#dribblelogo {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  right: 60px;
-  top: 35px
-}
-#githublogo {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  right: 60px;
-  top: 75px
-}
+
 #container {
-  width: 80%;
-  margin: 0 auto; /* found workaround for container width: https://www.youtube.com/watch?v=FEmysQARWFU */ 
+  width: 100%;
+  margin: 0 auto; /* found workaround for container width: https://www.youtube.com/watch?v=FEmysQARWFU */
+  left: -20px;
+  right: -20px
 }
+
 #banner{
   padding-top: 50px;
 }
 
-#projects{
-  padding-top: 50px;
-}
-
+/* About Me Section*/
 #aboutme{
   padding-top: 50px;
   width: 80%;
 }
-#aboutme_div{
+
+.paraalt{
+  color:#FF8C08;
+  top: 50px;
+ }
+
+#aboutme_wrapper{
+  background-color: #FFFFFF;
   top: 50px;
   border-top:3px white solid;
   border-bottom: 3px white solid;
   border-left: 3px white solid;
   border-right: 3px white solid;
   border-radius: 30px;
-  background-color: #FFFFFF;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
   height: 300px;
-  width: 100%
+  width: 100%;
+}
+#aboutme_div{
+  width: 80%;
 }
 
-.header2{ 
+#aboutme_text{
+  width: 50%;
+  float: left;
+  display: block;
+  padding-bottom: 10px;
+}
+
+#aboutme_div_img{
+float: left;
+display: block;
+width: 50%;
+}
+
+#img_aboutme{
+  width: 70%;
+  padding-left: 100px;
+  padding-top: 15px;
+  padding-right: 40px;
+  }
+
+.para2{
   color:#FF8C08;
-  padding:0
+  float: left;
+}
+
+/*Home Section - JS BG */
+canvas{
+  background: linear-gradient(-135deg, #FF8C08, #FEA742);
+  margin:0;
+  left: -20px;
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+#hero { 
+  top: 0;
+  margin: 0;
+  overflow-x: hidden;
+  z-index: -9999;
+  width: 110%;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+}
+
+/*Project Section*/
+#projects{
+  width:80%;
+  overflow:hidden;
+  z-index: 9999;
+  margin-left:20%;
+  padding-top: 70px;
+}
+
+#prj-sec{
+  background-color: #FFFFFF;
+  margin-left: -20%;
+  margin-right: -20%;
+  z-index: -9998;
+}
+
+#project_1{
+  width:25%;
+  float: left;
+  padding-left: 5px;
+ display: block;
+}
+
+#project_2{
+  width:25%;
+  float: left;
+  padding-left: 5px;
+  display: block;
+}
+
+#project_3{
+  width:25%;
+  float: left;
+  padding-left: 5px;
+  display: block;
+}
+
+#prj_img{
+  max-width: 50%;
+}
+
+/* Contact Me*/
+hr{
+border: 2px solid #FFFFFF;
+margin-left: -8px;
+margin-right: -10px;
+/* https://www.w3schools.com/howto/howto_css_style_hr.asp*/
+}
+#contactme{
+  padding-top: 70px;
+  width: 80%;
+  height: 300px
  }
- .para2{
-   color:#FF8C08;
-   padding: 15px
- }
+
+#contactheader{
+  top: -20px;
+}
+
+
+#contact_div_img{
+  padding-left: 100px
+}
+
+#Asset_1{
+  width: 70%;
+  transform: rotate(180deg);
+}
+
+/* Social Media */
+#smicon{
+  float: left;
+}
+
+#dribblelogo {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+#githublogo {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+#linkedinlogo {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+#emaillogo {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+/* Footer Section*/
 .footer {
   color: #FF8C08;
   background-color: #FFFFFF;
   position: fixed;
-  margin-bottom: 0px;
   bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 50px
+  height: 30px;
+  
 }
-#circle1{
- overflow: visible /*https://stackoverflow.com/questions/24894921/svg-being-cut-off Nikita, Sep 21,'17*/
+
+#footer_div{ 
+  text-align: center;
+  font-size: 0.75em;
+  margin: auto;
+  overflow: visible
 }
-#circle2{
- overflow: visible /*https://stackoverflow.com/questions/24894921/svg-being-cut-off Nikita, Sep 21,'17*/
+
+#line{
+  overflow: visible
 }
