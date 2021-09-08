@@ -1,14 +1,21 @@
 /* General*/
+
+
 body{
- background-color: #FF8C08;
- overflow-x: hidden;
- margin-left: 15%;
- margin-right: 15%
+  background-color: #FF8C08;
+  overflow-x: hidden;
+  width:100%
+  }
+
+img{
+  display: block;
+  max-width: 100%;
 }
 
-h1, h2{
+/*Typography*/
+h1, h2, h3{
   color: #FFFFFF; 
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header2_2{
@@ -21,6 +28,15 @@ h1 {
   font-weight: 100;
   line-height:4em
 }
+
+#header-title{
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  margin-right: 5%;
+}
+
 strong{
   font-size: 100pt
 }
@@ -30,22 +46,8 @@ p{
   font-family: Arial, Helvetica, sans-serif
 }
 
-section{
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-#container{
- background: linear-gradient(to bottom, #FF8C08, transparent);
- top: 0;
- position: fixed;
- width: 100%;
- display: flex;
-}
-
-#title{
-width: 60%;
+.para{
+  color: #9B8DA5;
 }
 
 /* Nav Section*/
@@ -58,7 +60,7 @@ nav a {
 }
 
 nav a:hover{
-  border-bottom: 3px white solid;
+  border-bottom: 3px #574B60;
   font-weight: bold;
 }
 
@@ -85,13 +87,14 @@ nav li {
 }
 
 #mainnav {
-  width: 750px;
+  width: 100%;
   height: 50px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   text-align: center;
   display: inline-block;
   padding-top: 25px;
+  margin-left:5%;
 }
 
 #container {
@@ -106,6 +109,20 @@ nav li {
 }
 
 
+/*Home Section */
+#banner{
+  margin-left:10%;
+}
+#title{
+  width: 60%;
+  }
+#container{
+  background: linear-gradient(to bottom, #FF8C08, transparent);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+ }
 /*Home Section - JS BG */
 canvas{
   background: linear-gradient(-135deg, #FF8C08, #FEA742);
@@ -127,178 +144,183 @@ canvas{
   position: absolute;
 }
 
-/*Project Section*/
-#projects{
-  width:80%;
-  overflow:hidden;
-  z-index: 9999;
-  margin-left:20%;
-  padding-top: 70px;
-}
-
-#prj-sec{
-  background-color: #FFFFFF;
-  margin-left: -20%;
-  margin-right: -35%;
-  z-index: -9998;
-}
-
-#project_1{
- width:30%;
- float: left;
- padding: 10px;
- display: block;
-}
-
-#project_2{
-  width: 30%;
-  float: left;
-  padding: 5px;
-  display: block;
-}
-
-#project_3{
-  width: 30%;
-  float: left;
-  padding: 10px;
-  display: block;
-}
-
-#prj_img{
-  max-width: 50%;
-}
-
-/* About Me Section*/
+/*About Me section*/
 #aboutme{
-  padding-top: 50px;
-  width: 120%
-}
-
-.paraalt{
-  color:#FF8C08;
-  top: 50px;
- }
-
-#aboutme_wrapper{
   background-color: #FFFFFF;
-  top: 50px;
-  border-top:3px white solid;
-  border-bottom: 3px white solid;
-  border-left: 3px white solid;
-  border-right: 3px white solid;
-  border-radius: 30px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  height: 300px;
   width: 100%;
-}
-#aboutme_div{
-  width: 80%;
-}
-
-#aboutme_text{
-  width: 50%;
-  float: left;
-  display: block;
-  padding-bottom: 10px;
+  height: 550px;
+  padding: 0;
 }
 
-#aboutme_div_img{
-float: left;
-display: block;
-width: 50%;
+#aboutme-container{
+  display: inline-block;
+  margin-left:10%;
+  margin-top: 5%;
 }
 
-#img_aboutme{
-  width: 70%;
-  padding-left: 100px;
-  padding-top: 15px;
-  padding-right: 40px;
+#about-me-text {
+  position:absolute;
+  z-index:1;
+  width: 30%
+}
+
+#about-me-text-header{
+  color: #FF8C08;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25pt;
+}
+
+
+/*illustration*/
+#about-me-ill-div{
+  float: right;
+  position:relative;
+  z-index:0;
+  margin-left: 40%;
+  padding:0;
   }
 
-.para2{
-  color:#FF8C08;
-  float: left;
+#about-me-ill{
+  width: 100%;
+} 
+  
+
+/*Button https://www.w3schools.com/howto/howto_css_animate_buttons.asp*/
+#cv-button{
+  background-color: #FF8C08;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  transition: all 0.5s;
 }
 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*Project*/
+#projects{
+  width:100%;
+  background-color: #FFFFFF;
+  height: 550px;
+}
+
+.section-title{
+  margin-left: 10%;
+  margin-top: 5%;
+  color: #FF8C08;
+}
+
+#project-para{
+ margin-left: 10%;
+}
+
+.portfolio{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width:80%;
+  margin: 0 auto;
+}
+
+.portfolio-item{
+  background-color: #FFFFFF;
+}
 
 /* Contact Me*/
 hr{
 border: 2px solid #FFFFFF;
-margin-left: -8px;
-margin-right: -10px;
 /* https://www.w3schools.com/howto/howto_css_style_hr.asp*/
+margin:0;
 }
 #contactme{
-  padding-top: 70px;
-  width: 80%;
-  height: 300px
+  height: 300px;
+  margin-left: 10%;
  }
 
 #contactheader{
   top: -20px;
 }
 
-
-#contact_div_img{
-  padding-left: 100px
-}
-
-#Asset_1{
-  width: 70%;
-  transform: rotate(180deg);
-}
-
 /* Social Media */
 #smicon{
   float: left;
+  margin-left: 10%;
 }
 
 #dribblelogo {
-  width: 50px;
-  height: 50px;
+  float: left;
+  width: 35px;
+  height: 35px;
   padding-right: 20px;
+  text-decoration: none !important;
 }
 
 #githublogo {
-  width: 50px;
-  height: 50px;
+  float: left;
+  width: 35px;
+  height: 35px;
   padding-right: 20px;
+  text-decoration: none !important;
 }
 
 #linkedinlogo {
-  width: 50px;
-  height: 50px;
+  float: left;
+  width: 35px;
+  height: 35px;
   padding-right: 20px;
+  text-decoration: none !important;
 }
 
 #emaillogo {
-  width: 50px;
-  height: 50px;
+  float: left;
+  width: 35px;
+  height: 35px;
   padding-right: 20px;
+  text-decoration: none !important;
 }
 
 /* Footer Section*/
-.footer {
+
+#footer-div{ 
   color: #FF8C08;
-  background-color: #FFFFFF;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 30px;
-  
-}
-
-#footer_div{ 
-  text-align: center;
-  font-size: 0.75em;
+  width:100%;
   margin: auto;
-  overflow: visible
+  left:0;
+  bottom:0;
+  top:0;
+  text-align: center;
 }
-
-#line{
-  overflow: visible
+#footer-text{
+margin: 0;
+font-size: 1em;
+text-align: center;
+padding: 10px;
 }

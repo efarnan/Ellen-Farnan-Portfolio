@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="keywords" content="HTML5, Browsers, meta tags">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Ellen Farnan">
     <meta http-equiv="refresh" content="60">
     <title>Ellen Farnan</title>   
     <link href="style.css" rel="stylesheet" type="text/css"/>
   
-  <script type="text/javascript" src="canvas.js" async>
-  </script>
+    <script type="text/javascript" src="canvas.js" async>
+     </script>
 
   </head>
 
@@ -21,81 +20,88 @@
     <canvas id="hero"></canvas> 
 
     <div id="wrapper">
-    <div id="container">
-      <nav id="mainnav">
-        <ul> 
-          <li><a href="#banner">home</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#aboutme">about me</a></li>
-          <li><a href="#contactme">contact me</a></li>
-        </ul>
+      <div id="container">
+        <nav id="mainnav">
+          <ul> 
+            <li><a href="#banner">home</a></li>
+            <li><a href="#aboutme">about me</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contactme">contact me</a></li>
+          </ul>
         </nav>
+        <h3 id=header-title>Ellen Farnan.</h3>
       </div>
+
+      <!--Home Section-->
 
       <section id=banner>
         <h1 id="title">Hi, I'm <br><strong>Ellen Farnan.</strong></h1>
           <p> < Junior Front End Developer & UX/UI Designer. > <p>
-         </section>
-    </div>
-  
-    <section id="prj-sec">
-      <div id="projects">
-        <h2 class="header2_2">projects</h2>
-       <div id="project_1">
-         <p class="para2"> <a href="">Project 1</a> <br>  Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-         <img src="images/watchthisspace.png" id="prj_img" alt="Watch This Space Project Holder">
-       </div>
-       <div id="project_2">
-         <p class="para2"> <a href="">Project 2</a> <br>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-         <img src="images/watchthisspace.png" id="prj_img" alt="Watch This Space Project Holder">
-        </div>
-       <div id="project_3">
-         <p class="para2"> <a href="">Project 3</a> <br>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-         <img src="images/watchthisspace.png" id="prj_img" alt="Watch This Space Project Holder">
-         </div>
-      </div>
-     </section>   
-
-      <section id="aboutme"> 
-      <br>  
-      <div id="aboutme_div">
-        <h2 class="header2">about me</h2>
-         <div id="aboutme_wrapper">
-          <p class="para2" id="aboutme_text"> <br><br>I am a self-taught frontend developer with a background in animation production. 
-         <br><br> 
-         Find out more on my journey <a href="">here.</a>
-         <br><br>
-         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem repellat, quos cupiditate corrupti omnis dolorum. Iure, voluptatum eum doloribus, voluptates quam voluptatibus totam tempore saepe fugit inventore modi repudiandae accusantium.<p>
-
-         <div id="aboutme_div_img"> 
-         <img src="images/Asset_2.png" id="img_aboutme" alt="About Me Illusration">
-         </div>
-
-        </div>
-      </div>
+            <br>
       </section>
+    </div>
+    
+    <!--About Me Section-->
+    <section id="aboutme">
+      <div id="aboutme-container">
+        <div id="about-me-text">
+          <h3 id="about-me-text-header">Let me <br> introduce myself</h3>
+          <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          <a href="files/Ellen Farnan_2021.pdf" download="EllenFarnan_CV.pdf">
+           <button type="button" class="button" id="cv-button"><span>Download CV</span></button> <!--https://www.w3schools.com/tags/tag_button.asp-->
+          </a>
+        </div>
+      
+        <div id="about-me-ill-div">
+         <img src= images/SelfbrandingV6.png id="about-me-ill">
+        </div>
+      </div>
 
-      <br><br>
-
-      <section id="contactme">
-        <hr>
+    <!--Projects-->
+    <section id="projects">
+      <br>
+      <h2 class="section-title">Projects</h2>
+      <p class="para" id="project-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+      <div class="portfolio">
+      <!--Portfolio Item 01-->
+      <a href="#" class="portfolio-item">
+        <img src="images/watchthisspace.png" class="portfolio-img">
+      </a>
+     <!--Portfolio Item 02-->
+      <a href="#" class="portfolio-item">
+       <img src="images/watchthisspace.png" class="portfolio-img">
+      </a>
+      <!--Portfolio Item 03-->
+      <a href="#" class="portfolio-item">
+        <img src="images/watchthisspace.png" class="portfolio-img">
+       </a>
+       <!--Portfolio Item 04-->
+      <a href="#" class="portfolio-item">
+        <img src="images/watchthisspace.png" class="portfolio-img">
+       </a>
+      </div>
+    </section>
+  
+    <section id="contactme">
         <div id="contactheader">
         <br><br>
         <h2>contact me</h2>
+        <p>Get in touch!</p>
+        <p id="email">ellen.farnan@outlook.com</p>
         </div>
-        <div id="contact_wrapper">
+        <div id="contact-wrapper">
           <div id="smicons">  
             <a href="https://dribbble.com/efarnan"> <img src="images/dribblelogo.png" target="_blank" alt="Dribble Logo" id="dribblelogo" class="logo" > </a>
             <a href="https://github.com/efarnan"> <img src="images/githublogo.png" target="_blank" alt="Github Logo" id="githublogo" class="logo"> </a>
             <a href="https://www.linkedin.com/in/ellen-farnan/"> <img src="images/linkedinlogo.png" target="_blank" alt="LinkedIn Logo" id="linkedinlogo" class="logo"> </a>
-            <a href="mailto:farnan.dev@gmail.com"> <img src="images/emaillogo.png" target="_blank" alt="Email Logo" id="emaillogo" class="logo"> </a>
+            <a href="mailto:ellen.farnan@outlook.com"> <img src="images/emaillogo.png" target="_blank" alt="Email Logo" id="emaillogo" class="logo"> </a>
             </div>
           </div> 
      </section>
 
       <footer class="footer">
         <div id="footer_div">
-        <p class=paraalt> Copyright &copy; 2021, Ellen Farnan</p>
+        <p id="footer-text"> Copyright &copy; 2021, Ellen Farnan</p>
         </div>
       </footer>
 
