@@ -1,15 +1,19 @@
 /* General*/
-
-
 body{
   background-color: #FF8C08;
   overflow-x: hidden;
-  width:100%
+  width:100%;
+  padding: 0;
+  margin: 0;
   }
 
 img{
   display: block;
   max-width: 100%;
+}
+
+section{
+  padding: 5em 2em;
 }
 
 /*Typography*/
@@ -24,7 +28,7 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 1.25em;
   font-weight: 100;
   line-height:4em
 }
@@ -34,7 +38,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 100;
-  margin-right: 5%;
+  float: right;
 }
 
 strong{
@@ -42,7 +46,6 @@ strong{
 }
 
 p{
-  color: #FFFFFF;
   font-family: Arial, Helvetica, sans-serif
 }
 
@@ -50,18 +53,35 @@ p{
   color: #9B8DA5;
 }
 
+.para-accents{
+  color: #FFFFFF;
+}
+
 /* Nav Section*/
+.navbar{
+  background: linear-gradient(to bottom, #FF8C08, transparent);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  margin: 0 auto; /* found workaround for container width: https://www.youtube.com/watch?v=FEmysQARWFU */
+  z-index: 1;
+}
+
 nav a {
-  text-decoration: none;
+  float: left;
+  display: block;
+  color: #FFFFFF;
   text-align: center;
-  color:#FFFFFF;
-  width: 150px;
-  display: inline-block
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav a:hover{
-  border-bottom: 3px #574B60;
-  font-weight: bold;
+  background-color: #FFFFFF;
+  color: #FF8C08;
 }
 
 nav a:hover img {
@@ -73,61 +93,44 @@ nav a:visited{
   opacity: 50%;
 }
 
-nav ul /* https://www.w3schools.com/css/css_navbar.asp*/ {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
+.navbar .icon {
+  display: none;
 }
 
-nav li {
-  display: inline; /**/
-  margin-left:70px;
-  padding-top:25px;
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
 }
 
-#mainnav {
-  width: 100%;
-  height: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
-  text-align: center;
-  display: inline-block;
-  padding-top: 25px;
-  margin-left:5%;
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
-
-#container {
-  width: 100%;
-  margin: 0 auto; /* found workaround for container width: https://www.youtube.com/watch?v=FEmysQARWFU */
-  left: -20px;
-  right: -20px
-}
-
-#banner{
-  padding-top: 50px;
-}
-
 
 /*Home Section */
-#banner{
-  margin-left:10%;
+#home{
+  position: relative;
+  padding-left: 10%;
 }
 #title{
   width: 60%;
   }
-#container{
-  background: linear-gradient(to bottom, #FF8C08, transparent);
-  top: 0;
-  position: fixed;
-  width: 100%;
-  display: flex;
- }
+
 /*Home Section - JS BG */
 canvas{
   background: linear-gradient(-135deg, #FF8C08, #FEA742);
   margin:0;
-  left: -20px;
   position: relative;
   width: 100%;
   height: 100%
@@ -148,40 +151,41 @@ canvas{
 #aboutme{
   background-color: #FFFFFF;
   width: 100%;
-  height: 550px;
-  padding: 0;
+  height: auto;
+  position: relative;
+  display: block;
+  padding-left: 10%;
 }
 
 #aboutme-container{
-  display: inline-block;
-  margin-left:10%;
-  margin-top: 5%;
+  display: inline-flex;
 }
 
 #about-me-text {
-  position:absolute;
-  z-index:1;
-  width: 30%
+  width: 30%;
+  display: inline-block
 }
 
 #about-me-text-header{
   color: #FF8C08;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25pt;
+  font-size: 2em;
 }
 
+.para{
+  overflow: auto;
+}
 
 /*illustration*/
 #about-me-ill-div{
-  float: right;
-  position:relative;
-  z-index:0;
-  margin-left: 40%;
-  padding:0;
+  padding-left:5%;
+  display: inline-block;
+  max-width: 50%;
   }
 
 #about-me-ill{
-  width: 100%;
+  max-width: 90%;
+  min-width: 50%;
 } 
   
 
@@ -226,28 +230,29 @@ canvas{
   right: 0;
 }
 
-/*Project*/
-#projects{
+/*Project https://www.youtube.com/watch?v=_xkSvufmjEs&t=1121s*/
+#work{
   width:100%;
   background-color: #FFFFFF;
-  height: 550px;
+  height: auto;
+  display: block;
+}
+
+#work-text{
+  padding-left: 10%;
 }
 
 .section-title{
-  margin-left: 10%;
-  margin-top: 5%;
   color: #FF8C08;
-}
-
-#project-para{
- margin-left: 10%;
+  font-size: 2em;
 }
 
 .portfolio{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width:80%;
-  margin: 0 auto;
+  margin-left:5%;
+  margin-right: 5%;
+  padding: 5% 0;
 }
 
 .portfolio-item{
@@ -256,18 +261,19 @@ canvas{
 
 /* Contact Me*/
 hr{
-border: 2px solid #FFFFFF;
+ border: 2px solid #FFFFFF;
 /* https://www.w3schools.com/howto/howto_css_style_hr.asp*/
-margin:0;
+ margin:0;
 }
-#contactme{
-  height: 300px;
-  margin-left: 10%;
- }
 
-#contactheader{
-  top: -20px;
-}
+#contactme{
+  height: auto;
+  background-color: #FF8C08;
+  width: 100%;
+  display: relative;
+  left:0;
+  padding-left: 10%;
+ }
 
 /* Social Media */
 #smicon{
@@ -308,19 +314,64 @@ margin:0;
 }
 
 /* Footer Section*/
-
 #footer-div{ 
   color: #FF8C08;
-  width:100%;
+  width: 100%;
   margin: auto;
   left:0;
   bottom:0;
   top:0;
   text-align: center;
+  position: relative;
 }
+
 #footer-text{
-margin: 0;
-font-size: 1em;
-text-align: center;
-padding: 10px;
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+/*ADDITIONAL PAGES - Project examples*/
+.projectexample-wrapper{
+  margin: 10%;
+}
+
+.projectexample-text{
+  top:0;
+  width: 40%;
+  display: inline-block;
+  vertical-align:top;
+  color: #9B8DA5 !important;
+}
+
+.projectexample-image{
+  max-width: 80%;
+  min-width: 30%;
+  display: inline-block;
+}
+
+#projectexample_1{
+  width: 80%;
+}
+
+.project-header{
+  text-decoration: none !important;
+  font-size: 1.75em;
+}
+
+.title-logo{
+  display: inline-block;
+  padding: 0.5em;
+  right:0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  margin: 1em;
+}
+
+.block-para{
+  background-color: #FFFFFF;
+  border-radius: 1em;
+  padding: 1% 10%;
 }

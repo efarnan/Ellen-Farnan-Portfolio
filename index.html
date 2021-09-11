@@ -10,7 +10,7 @@
     <title>Ellen Farnan</title>   
     <link href="style.css" rel="stylesheet" type="text/css"/>
   
-    <script type="text/javascript" src="canvas.js" async>
+    <script src="canvas.js" async>
      </script>
 
   </head>
@@ -21,23 +21,23 @@
 
     <div id="wrapper">
       <div id="container">
-        <nav id="mainnav">
-          <ul> 
-            <li><a href="#banner">home</a></li>
-            <li><a href="#aboutme">about me</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contactme">contact me</a></li>
-          </ul>
+        <nav id="mainnav"> <!--https://www.w3schools.com/howto/howto_js_bottom_nav_responsive.asp-->
+          <div class="navbar" id="myNavbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#aboutme">About Me</a>
+            <a href="#work">Work</a>
+            <a href="#contactme">Contact</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>  
         </nav>
-        <h3 id=header-title>Ellen Farnan.</h3>
       </div>
 
       <!--Home Section-->
 
-      <section id=banner>
+      <section id=home>
         <h1 id="title">Hi, I'm <br><strong>Ellen Farnan.</strong></h1>
-          <p> < Junior Front End Developer & UX/UI Designer. > <p>
-            <br>
+          <p class="para-accents"> < Junior Front End Developer & UX/UI Designer. > <p> <!--Chevron has been used-->
+          <br>
       </section>
     </div>
     
@@ -47,61 +47,62 @@
         <div id="about-me-text">
           <h3 id="about-me-text-header">Let me <br> introduce myself</h3>
           <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-          <a href="files/Ellen Farnan_2021.pdf" download="EllenFarnan_CV.pdf">
-           <button type="button" class="button" id="cv-button"><span>Download CV</span></button> <!--https://www.w3schools.com/tags/tag_button.asp-->
+          <a href="files/Ellen_Farnan_2021.pdf" download="EllenFarnan_CV.pdf">
+          <button type="button" class="button" id="cv-button"><span>Download CV</span></button> <!--https://www.w3schools.com/tags/tag_button.asp-->
           </a>
         </div>
       
         <div id="about-me-ill-div">
-         <img src= images/SelfbrandingV6.png id="about-me-ill">
+         <img src= images/SelfbrandingV6.png id="about-me-ill" alt="illustration">
         </div>
       </div>
+    </section>  
 
     <!--Projects-->
-    <section id="projects">
-      <br>
-      <h2 class="section-title">Projects</h2>
-      <p class="para" id="project-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+    <section id="work">
+      <div id="work-text">
+        <h2 class="section-title">Work</h2>
+        <p class="para" id="work-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+      </div>
       <div class="portfolio">
       <!--Portfolio Item 01-->
-      <a href="#" class="portfolio-item">
-        <img src="images/watchthisspace.png" class="portfolio-img">
-      </a>
+        <a href="pages/projectexample.html" class="portfolio-item">
+         <img src="images/watchthisspace.png" class="portfolio-img" alt="portfolio-example-1">
+       </a>
      <!--Portfolio Item 02-->
-      <a href="#" class="portfolio-item">
-       <img src="images/watchthisspace.png" class="portfolio-img">
-      </a>
+       <a href="pages/projectexample.html" class="portfolio-item">
+         <img src="images/watchthisspace.png" class="portfolio-img" alt="portfolio-example-2">
+       </a>
       <!--Portfolio Item 03-->
-      <a href="#" class="portfolio-item">
-        <img src="images/watchthisspace.png" class="portfolio-img">
-       </a>
+        <a href="pages/projectexample.html" class="portfolio-item">
+         <img src="images/watchthisspace.png" class="portfolio-img" alt="portfolio-example-3">
+        </a>
        <!--Portfolio Item 04-->
-      <a href="#" class="portfolio-item">
-        <img src="images/watchthisspace.png" class="portfolio-img">
-       </a>
+        <a href="pages/projectexample.html" class="portfolio-item">
+         <img src="images/watchthisspace.png" class="portfolio-img" alt="portfolio-example-4">
+        </a>
       </div>
     </section>
   
     <section id="contactme">
-        <div id="contactheader">
-        <br><br>
-        <h2>contact me</h2>
+        <div id="contactheader" class="para-accents">
+        <h3>contact me</h3>
         <p>Get in touch!</p>
-        <p id="email">ellen.farnan@outlook.com</p>
+        <p class="para-accents" id="email">ellen.farnan@outlook.com</p>
         </div>
         <div id="contact-wrapper">
           <div id="smicons">  
-            <a href="https://dribbble.com/efarnan"> <img src="images/dribblelogo.png" target="_blank" alt="Dribble Logo" id="dribblelogo" class="logo" > </a>
-            <a href="https://github.com/efarnan"> <img src="images/githublogo.png" target="_blank" alt="Github Logo" id="githublogo" class="logo"> </a>
-            <a href="https://www.linkedin.com/in/ellen-farnan/"> <img src="images/linkedinlogo.png" target="_blank" alt="LinkedIn Logo" id="linkedinlogo" class="logo"> </a>
-            <a href="mailto:ellen.farnan@outlook.com"> <img src="images/emaillogo.png" target="_blank" alt="Email Logo" id="emaillogo" class="logo"> </a>
+            <a href="https://dribbble.com/efarnan" target="_blank"> <img src="images/dribblelogo.png" alt="Dribble Logo" id="dribblelogo" class="logo" > </a>
+            <a href="https://github.com/efarnan" target="_blank"> <img src="images/githublogo.png" alt="Github Logo" id="githublogo" class="logo"> </a>
+            <a href="https://www.linkedin.com/in/ellen-farnan/" target="_blank"> <img src="images/linkedinlogo.png" alt="LinkedIn Logo" id="linkedinlogo" class="logo"> </a>
+            <a href="mailto:ellen.farnan@outlook.com" target="_blank"> <img src="images/emaillogo.png" alt="Email Logo" id="emaillogo" class="logo"> </a>
             </div>
           </div> 
      </section>
 
       <footer class="footer">
         <div id="footer_div">
-        <p id="footer-text"> Copyright &copy; 2021, Ellen Farnan</p>
+        <p id="footer-text" class="para-accents"> Copyright &copy; 2021, Ellen Farnan</p>
         </div>
       </footer>
 
