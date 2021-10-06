@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5, Browsers, meta tags">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Ellen Farnan">
+    <title>Ellen Farnan</title>   
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+ </head>
+
+ <body>
+   <header>
+    <div id="wrapper">
+        <div id="container">
+          <nav id="mainnav"> <!--https://www.w3schools.com/howto/howto_js_bottom_nav_responsive.asp-->
+            <div class="navbar" id="myNavbar">
+              <a href="index.html#home" class="active">Home</a>
+              <a href="index.html#aboutme">About Me</a>
+              <a href="index.html#work">Work</a>
+              <a href="index.html#contactme">Contact</a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleMenu()">&#9776;</a>
+            </div>
+          </nav>
+        </div>
+    </div>   
+   </header> 
+   <main>
+    <div class="projectexample-wrapper">
+      <div class="project-header-wrapper">
+       <a href=# id="project-header-link"> <h3 class="project-header">Project Example </h3></a>
+
+       <div id="tag-div">
+        <button class="tag">#html</button>
+        <button class="tag">#css</button>
+        <button class="tag">#javascript</button>
+      </div>
+      <br>
+      <hr>
+      </div>
+      <br>
+      <div class="projectexample-image">
+        <img src=images/goran-ivos-iOykDIkZLQw-unsplash.jpg alt="placeholder-image" id="projectexample_1">
+      </div>
+      <div class="projectexample-text">
+        <div class="block-para">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget quam ultrices, porttitor purus eu, condimentum magna. Fusce pellentesque quam vel interdum molestie. <br><br>Vivamus eget dignissim odio, eu tincidunt nunc. Proin nisi est, lobortis non condimentum quis, gravida vitae nunc. Mauris laoreet aliquam finibus. In velit diam, dignissim at tortor vel, hendrerit ornare felis. Proin bibendum dapibus leo, vitae laoreet libero fermentum quis. Sed tristique odio viverra est laoreet facilisis.</p>
+         <p><a href=#>Example Link</a></p>  
+        </div>
+      </div>
+    </div>
+   </main>
+   <footer class="footer">
+    <div id="footer_div">       
+    <p id="footer-text" class="para-accents"> Copyright &copy; 2021, Ellen Farnan</p>
+    </div>
+   </footer>
+
+  <script>
+   /*Navbar*/
+    function toggleMenu() {
+      let toggleMenu = document.getElementById("myNavbar");
+      if (toggleMenu.className === "navbar") {
+        toggleMenu.className += " responsive";
+      } else {
+        toggleMenu.className = "navbar";
+      }
+    }
+  </script>  
+</body>
+    
+</html>    
